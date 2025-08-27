@@ -20,6 +20,8 @@ jobs:
         java-version: '17'
         distribution: 'adopt'
         #cache: maven
+    - name: Make gradlew executable
+      run: chmod +x ./gradlew
     - name: Build with Gradle
       run: |
         ./gradlew shadowJar --no-daemon
